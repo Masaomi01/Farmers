@@ -1,6 +1,6 @@
-class CreateBbs < ActiveRecord::Migration[6.0]
+class CreateForums < ActiveRecord::Migration[6.0]
   def change
-    create_table :bbs do |t|
+    create_table :forums do |t|
       t.string :title, null: false
       t.text :content, null: false
       t.timestamps
