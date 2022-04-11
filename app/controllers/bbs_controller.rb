@@ -1,0 +1,3 @@
+class BbsController < ApplicationController
+
+end
