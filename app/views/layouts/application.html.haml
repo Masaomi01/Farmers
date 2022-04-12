@@ -9,15 +9,5 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
   %body
-    %header#header
-      .inner
-        %p.logo FARNECT
-        %ul.navi
-          %li
-            =link_to 'Home', forums_path
-          %li
-            %a{:href => "#"} About
-          %li
-            %a{:href => "#"} Contact
     
     = yield

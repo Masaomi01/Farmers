@@ -1,3 +1,6 @@
+.back-image-color {
+    background-color: rgb(252, 244, 244);
+}
 .top {
     background-image: url(top.png);
     width: 100%;
@@ -28,12 +31,13 @@
     margin: 12px;
     
    
-    .main-sp {
+    .main-content {
         padding: 36px;
         font-weight: bold;
         float: left;
         border: solid 3px #555555;
         width: 50%;
+        overflow: scroll;
     }
 
     .title-image {
@@ -67,6 +71,7 @@
         font-weight: bold;
         width: 50%;
         margin-left: auto;
+        overflow: scroll    ;
 
     }
 }
@@ -75,7 +80,7 @@
     
 
     .form-section-button a {
-        background: #eee;
+        background: rgb(236, 247, 248);
         border-radius: 50px;
         position: relative;
         display: flex;
@@ -92,6 +97,7 @@
         font-weight: bold;
         align-items: center;
         font-size: 18px;
+        border: 2px solid rgb(96, 60, 196)
     }
     .form-section-button a:after {
         position: absolute;

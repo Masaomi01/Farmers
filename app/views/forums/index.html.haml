@@ -1,1 +1,12 @@
-%h1 BBS
+.container
+  .bbs-title
+    %h2 掲示板
+.forum-image
+.container
+  .forum-wrapper
+    - @forums.each do |forum|
+      .forum
+        .forum-title
+          = forum.title
+        .forum_content
+          = forum.content

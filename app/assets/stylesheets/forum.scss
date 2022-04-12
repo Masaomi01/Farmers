@@ -1,0 +1,53 @@
+.bbs-title {
+    text-align: center;
+    font-size: 48px;
+    padding-top: 64px;
+    background-image: url(footer.png);
+    width: 100%;
+    height: 300px;
+    object-fit:cover;
+    object-position: bottom;/*左下*/
+}
+
+.forum-wrapper {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    border: solid 2px #928f8f;
+    background-color: white;
+
+    .forum {
+        border-bottom: dotted;
+        background-color: white;
+        width: 95%;
+        font-family: Arial, Helvetica, sans-serif;
+        
+        .forum-title {
+            color: rgb(34, 73, 199);
+            cursor: pointer;
+            margin-top: 12px;
+            max-width: 400px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: bold;
+
+        }
+        .forum-title:hover {
+            color: rgb(233, 170, 33);
+            border-bottom: solid;
+        }
+        .forum_content{
+            max-width: 400px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-bottom: 12px;
+        }
+    }
+    
+    .forum p {
+        margin: 0; 
+        padding: 0;
+        
+    }
+}
