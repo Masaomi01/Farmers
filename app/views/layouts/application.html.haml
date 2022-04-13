@@ -13,13 +13,16 @@
       .inner
         .header-title
           = link_to 'FARNECT', root_path
+        
         %ul.navi
           %li
-            =link_to 'Home', forums_path
+            =link_to '投稿一覧', forums_path
           %li
             %a{:href => "#"} About
           %li
             %a{:href => "#"} Contact
+        = link_to 'ログイン', new_user_session_path, class: 'header_loginBtn'
+
     .top
       .container 
         .top-wapper
