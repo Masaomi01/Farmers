@@ -15,6 +15,14 @@ header {
     display: flex;
     align-items: center;
     height: 100%;
+
+    .header-title {
+        font-size: 24px;
+        font-family:monospace;
+    }
+    .header-title:hover {
+        opacity: 0.8;
+    }
     
   }
   .logo {

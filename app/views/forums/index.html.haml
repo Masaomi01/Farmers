@@ -6,7 +6,8 @@
   .forum-wrapper
     - @forums.each do |forum|
       .forum
-        .forum-title
-          = forum.title
+        = link_to forum_path(id: forum.id) do
+          .forum-title
+            = forum.title
         .forum_content
           = forum.content
