@@ -1,0 +1,16 @@
+.container
+  .bbs-title
+    %h2 掲示板
+.forum-image
+.container 
+  .forum-detail-image
+    .forum-detail-wrapper
+      .forum-detail
+        .forum-detail-title 
+          = @forum.title
+        .forum-detail-content 
+          = @forum.content
+      .forum-detail-info
+        %p= @forum.display_created_at
+
+  
