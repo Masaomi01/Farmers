@@ -1,7 +1,7 @@
 @import 'board';
 @import 'variable';
 @import 'header';
-
+@import 'forum';
 html {
     word-spacing: 1px;
     -ms-text-size-adjust: 100%;
@@ -24,6 +24,7 @@ html {
     background-color: $base-bg-color;
     font-size: 1em;
     color: $text-base-color;
+
   }
   
   a {
