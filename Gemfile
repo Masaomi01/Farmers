@@ -31,6 +31,7 @@ gem 'devise'
 gem 'faker'
 gem 'hamlit'
 gem 'haml-rails'
+gem 'devise'
 gem 'aws-sdk-s3', require: false  
 
 # Reduces boot times through caching; required in config/boot.rb
