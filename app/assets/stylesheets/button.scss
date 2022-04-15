@@ -70,3 +70,23 @@
     margin: 12px;
     border-radius: 10px;
   }
+
+
+
+.btn-border {
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
+    display:block;
+    max-width:300px;
+    margin:0 auto;
+    line-height:60px;
+    text-align:center;
+    transition:0.5s;
+    background:#e03f3d;
+    border-radius:10px;
+    border:solid 3px #e67b79;
+  }
+.btn-border:hover{
+    opacity:0.8;
+}
