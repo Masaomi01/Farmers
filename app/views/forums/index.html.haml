@@ -1,7 +1,10 @@
-.container
-  .bbs-title
-    %h2 掲示板
-.forum-image
+
+.bbs-title
+  %h2 掲示板
+.container 
+  = link_to '新規投稿', new_forum_path, class: 'btn-border'
+
+
 .container
   .forum-wrapper
     - @forums.each do |forum|
