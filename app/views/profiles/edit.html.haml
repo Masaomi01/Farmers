@@ -1,0 +1,16 @@
+.container
+  
+  .create-wrapper
+    %h2 プロフィールを編集する
+    = form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
+      %div
+        = f.label :nickname, 'ハンドルネーム'
+      %div
+        = f.text_field :nickname, class: 'text'
+      %div
+        = f.label :intodiuction, '自己紹介'
+      %div
+        = f.text_area :introduction
+        
+      = f.submit '保存', class: 'btn-primary'
+        
