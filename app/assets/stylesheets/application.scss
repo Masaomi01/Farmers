@@ -4,6 +4,8 @@
 @import 'forum';
 @import 'button';
 @import 'form';
+@import 'profile';
+
 html {
     word-spacing: 1px;
     -ms-text-size-adjust: 100%;
@@ -26,6 +28,7 @@ html {
     background-color: $base-bg-color;
     font-size: 1em;
     color: $text-base-color;
+    letter-spacing: 0.2em;
 
   }
   

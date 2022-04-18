@@ -17,6 +17,7 @@
     border-radius: 1%;
     width: 70%;
     margin: auto;
+    box-shadow: 2px 2px 4px;
 
     .forum {
         border-bottom: dotted;
@@ -65,6 +66,7 @@
     margin-bottom: 36px;
     position: relative;
     width: 60%;
+    box-shadow: 2px 2px 4px;
     
 
     .forum-detail {
@@ -91,15 +93,18 @@
 .create-wrapper {
     width: 60%;
     margin: auto;
+    
+    
+    
     input, select {
         &.text {
         width: 60%;
-        margin: 8px 0px;
+        margin: 12px;
         padding: 16px 24px;
         border: 1px solid #EBEBEB;
         font-size: 24px;
         border-radius: 10px;
-
+        box-shadow: 2px 2px 4px;
         }
     }
     
@@ -109,12 +114,14 @@
     
     textarea {
         width: 100%;
-        margin: 8px 0px;
+        margin: 12px;
         padding: 8px 8px;
         min-height: 440px;
         resize: vertical;
         border: 1px solid #EBEBEB;
         font-size: 18px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px;
     }
 }
 

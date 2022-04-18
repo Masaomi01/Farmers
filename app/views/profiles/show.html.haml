@@ -1,0 +1,14 @@
+.container
+  .profile
+    .profile-title 
+      %h2 プロフィール
+    .profile_img
+      = image_tag 'profile.jpeg', class: 'profile-avatar'
+    .forum-detail-wrapper
+      .profile-wrapper
+        %h3 名前
+        .profile_name 
+          = current_user.display_name
+        %h3 自己紹介
+        .profile_desc 
+          = current_user.profile&.introduction
