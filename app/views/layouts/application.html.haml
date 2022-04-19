@@ -34,6 +34,11 @@
             %h1 FARNECT
           .top-subtitle
             %p 日本の食を未来へ<br>農業と人を繋ぐ
+    - if flash.present?
+      .flash
+        - flash.each do |key, value|
+          %div{:class => key}= value
+
 
     
     = yield

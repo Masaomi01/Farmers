@@ -1,0 +1,12 @@
+.container
+  .create-wrapper
+    = form_with(model: @comment, url: forum_comment_path(@comment.forum), method: 'put', local: true) do |f|
+      
+      %div
+        = f.label :content, '内容'
+      %div
+        = f.text_area :content, class: 'text'
+      = f.submit '保存', class: 'btn-primary'
+      = link_to '消去する', forum_comment_path(@comment.forum, @comment.id), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }, class: 'btn-border'
+
+
