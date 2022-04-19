@@ -1,7 +1,7 @@
+// 新規登録ボタン
 .form-section {
     padding-top: 120px;
     
-
     .form-section-button a {
         background: rgb(236, 247, 248);
         border-radius: 50px;
@@ -35,9 +35,9 @@
         background: #6fc2fa;
         color: #FFF;
     }
-
 }
 
+// headerログインボタン
 .header_loginBtn {
     position: relative;
     display: inline-block;
@@ -48,16 +48,17 @@
     background: #ECECEC;
     transition: .4s;
     border: 3px solid;
-    border-radius: 5px;
+    border-radius: $base-radius;
     margin-left: 12px;
     transition: 0.8s ease-in-out;
     font-size: 18px;
-}
-  
+}  
 .header_loginBtn:hover {
     background: #18c451;
     color: rgb(207, 241, 220);
 }
+
+// form用ボタン
 .btn-primary {
     background-color: rgb(67, 139, 247);
     border: none;
@@ -67,26 +68,88 @@
     padding: 16px 0;
     font-weight: bold;
     font-size: 24px;
-    margin: 12px;
-    border-radius: 10px;
+    margin: 0 auto;
+    border-radius: $base-radius;
+    margin: auto;
+    display:block;
+    margin-bottom: 12px;
   }
 
-
-
+// 新規投稿ボタン　
 .btn-border {
     text-decoration:none;
     color:#fff;
     font-weight:bold;
     display:block;
-    max-width:300px;
+    width: 60%;
     margin:0 auto;
     line-height:60px;
     text-align:center;
     transition:0.5s;
     background:#e03f3d;
-    border-radius:10px;
+    border-radius:$base-radius;
     border:solid 3px #e67b79;
   }
 .btn-border:hover{
     opacity:0.8;
+}
+
+// コメント追加ボタン
+.comment-button {
+	display: block;
+	position: relative;
+	width: 30%;
+	padding: 6px;
+	text-align: center;
+	text-decoration: none;
+	color: #1B1B1B;
+	background: rgb(211, 228, 250);
+    border-radius: $base-radius;
+	border:2px solid #6b6a6a;
+	-webkit-backface-visibility: hidden; 
+	-moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    margin: 12px;
+    font-weight: bold;
+    position:absolute;
+    left:20px;
+    bottom:20px;
+}
+.comment-button:hover {
+    opacity: 0.8;
+	cursor: pointer;
+	text-decoration: none;
+	-webkit-animation: comment-button 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-moz-animation: comment-button 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: comment-button 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes comment-button {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+@-moz-keyframes comment-button {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+@keyframes comment-button {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
 }

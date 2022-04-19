@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_15_055606) do
+ActiveRecord::Schema.define(version: 2022_04_18_073140) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.bigint "forum_id", null: false
+    t.text "content", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["forum_id"], name: "index_comments_on_forum_id"
+  end
 
   create_table "forums", force: :cascade do |t|
     t.bigint "user_id", null: false

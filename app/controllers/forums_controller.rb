@@ -6,6 +6,7 @@ class ForumsController < ApplicationController
     end
 
     def show
+        @comments = @forum.comments
     end
 
     def new
@@ -21,6 +22,8 @@ class ForumsController < ApplicationController
           render :new
         end
     end
+
+    
 
 
     private

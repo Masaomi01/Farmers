@@ -12,5 +12,21 @@
           = @forum.content
       .forum-detail-info
         %p= @forum.display_created_at
+      .comment-button
+        = link_to new_forum_comment_path(@forum) do
+          %p コメントを追加
 
-  
+- if @comments.present?
+  .forum-comment
+    %h2 Comment
+  - @comments.each do |comment|
+    .comment-content
+      = comment.content
+      .comment-edit
+        = link_to edit_forum_comment_path(@forum, comment.id) do
+          = image_tag 'pen.svg', class: 'edit-img'
+        
+
+      .comment-detail-info
+        %p= comment.play_created_at
+    
