@@ -10,6 +10,8 @@
           = @forum.title
         .forum-detail-content 
           = @forum.content
+      .forum-detail-avatar 
+        = image_tag @forum.user.avatar_image
       .forum-detail-info
         %p= @forum.display_created_at
       .comment-button
@@ -25,8 +27,10 @@
       .comment-edit
         = link_to edit_forum_comment_path(@forum, comment.id) do
           = image_tag 'pen.svg', class: 'edit-img'
+      .comment-detail 
+        .comment-detail-avatar 
+          = image_tag comment.user.avatar_image
+          
+        .comment-detail-info
+          %p= comment.play_created_at
         
-
-      .comment-detail-info
-        %p= comment.play_created_at
-    
