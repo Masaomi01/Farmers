@@ -1,0 +1,4 @@
+= render 'form', forum: @forum
+.create-wrapper
+  = link_to '消去する', forum_path(@forum), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }, class: 'btn-border'
+

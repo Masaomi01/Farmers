@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root to: 'boards#index'
   resources :forums do
     resources :comments, only: [:new, :create, :edit, :update, :destroy]
+    
   end
   resource :profile
+  
 end

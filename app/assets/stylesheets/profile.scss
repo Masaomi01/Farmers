@@ -40,5 +40,27 @@
             font-size: 18px;
 
         }
+        .profile-edit {
+    
+
+            .edit-img {
+                display: flex;
+                height: 40px;
+                right: 24px;
+                top: 24px;
+                position: absolute;
+               
+                font-size: 24px;
+                width: 30px;
+            }
+            .edit-img:hover {
+                cursor: pointer;
+                filter:saturate(100%);
+                opacity: .7;
+                border-bottom: solid;
+                
+        
+            }
+        }
     }
 }

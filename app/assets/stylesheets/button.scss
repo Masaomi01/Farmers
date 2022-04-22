@@ -72,8 +72,13 @@
     border-radius: $base-radius;
     margin: auto;
     display:block;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
+    border:solid 3px rgb(121, 172, 248);
+    
   }
+.btn-primary:hover{
+    opacity:0.8;
+}
 
 // 新規投稿ボタン　
 .btn-border {
@@ -81,7 +86,7 @@
     color:#fff;
     font-weight:bold;
     display:block;
-    width: 60%;
+    width: 30%;
     margin:0 auto;
     line-height:60px;
     text-align:center;
@@ -89,6 +94,7 @@
     background:#e03f3d;
     border-radius:$base-radius;
     border:solid 3px #e67b79;
+    font-size: 24px;
   }
 .btn-border:hover{
     opacity:0.8;

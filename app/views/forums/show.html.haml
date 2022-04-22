@@ -1,22 +1,30 @@
 .container
   .bbs-title
     %h2 掲示板
-.forum-image
 .container 
-  .forum-detail-image
-    .forum-detail-wrapper
-      .forum-detail
-        .forum-detail-title 
-          = @forum.title
-        .forum-detail-content 
-          = @forum.content
-      .forum-detail-avatar 
+  - if @forum.eyecatch.attached?
+    .forum-detail-image
+      = image_tag @forum.eyecatch, class: 'forum-eyecatch'
+  .forum-detail-wrapper
+    .forum-detail
+      .forum-detail-title 
+        = @forum.title
+      - if user_signed_in? && current_user.has_written?(@forum)
+        .comment_forum-edit
+          = link_to edit_forum_path(@forum) do
+            = image_tag 'pen.svg', class: 'edit-img'
+      .forum-detail-content 
+        = @forum.content
+    .forum-detail-avatar 
+      = link_to profile_path(@forum.id) do
         = image_tag @forum.user.avatar_image
-      .forum-detail-info
-        %p= @forum.display_created_at
-      .comment-button
-        = link_to new_forum_comment_path(@forum) do
-          %p コメントを追加
+        
+    .forum-detail-info
+      %p= @forum.author_name
+      %p= @forum.display_created_at
+    .comment-button
+      = link_to new_forum_comment_path(@forum) do
+        %p コメントを追加
 
 - if @comments.present?
   .forum-comment
@@ -24,7 +32,7 @@
   - @comments.each do |comment|
     .comment-content
       = comment.content
-      .comment-edit
+      .comment_forum-edit
         = link_to edit_forum_comment_path(@forum, comment.id) do
           = image_tag 'pen.svg', class: 'edit-img'
       .comment-detail 
