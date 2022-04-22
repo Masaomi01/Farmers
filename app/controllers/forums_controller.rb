@@ -23,13 +23,33 @@ class ForumsController < ApplicationController
         end
     end
 
+    def edit
+        @forum = current_user.forums.find(params[:id])
+    end
+    
+    def update
+        @forum = current_user.forums.find(params[:id])
+        if @forum.update(forum_params)
+          redirect_to forum_path(@forum), notice: '更新しました'
+        else
+          flash.now[:error] = '更新できませんでした'
+          render :edit
+        end
+    end
+    
+    def destroy
+        forum = current_user.forums.find(params[:id])
+        forum.destroy!
+        redirect_to root_path, notice: '削除に成功しました'
+    end
+
     
 
 
     private
 
     def forum_params
-        params.require(:forum).permit(:title, :content)
+        params.require(:forum).permit(:title, :content, :eyecatch)
     end
 
     def set_forum

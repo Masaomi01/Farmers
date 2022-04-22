@@ -9,6 +9,9 @@ class User < ApplicationRecord
   def display_name
     profile&.nickname || self.email.split('@').first
   end
+  def has_written?(forum)
+    forums.exists?(id: forum.id)
+  end
 
 
   def prepare_profile
