@@ -12,3 +12,8 @@
         %h3 自己紹介
         .profile_desc 
           = current_user.profile&.introduction
+        - if user_signed_in?
+          .profile-edit
+            = link_to edit_profile_path do
+              = image_tag 'pen.svg', class: 'edit-img'
+        

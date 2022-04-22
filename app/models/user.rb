@@ -13,7 +13,6 @@ class User < ApplicationRecord
     forums.exists?(id: forum.id)
   end
 
-
   def prepare_profile
     profile || build_profile
   end
