@@ -7,7 +7,7 @@
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0", :name => "viewport"}/
     
   %body
     %header#header
@@ -20,6 +20,7 @@
               =link_to '投稿一覧', forums_path
             %li
               =link_to 'プロフィール', profile_path(current_user)  
+          
           = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete' }, class: 'header_loginBtn'
         - else
           .navi
