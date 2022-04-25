@@ -1,0 +1,17 @@
+{
+    "name": "farmers",
+    
+    "description": "This is taskapp",
+    "keywords": [],
+    "website": "",
+    "repository": "https://github.com/Masaomi01/TaskApp",
+    "env": {},
+    "addons": [
+      "heroku-postgresql:hobby-dev"
+    ],
+    "buildpacks": [{
+      "url": "heroku/nodejs"
+    }, {
+      "url": "heroku/ruby"
+    }]
+  }
